@@ -144,3 +144,79 @@ console.log(typeof obj); // "object"
 console.log(typeof arr); // "object"
 console.log(typeof greet); // "function"
 
+// non-primituve data types example
+// 1) Object
+let person = {
+    name: "Alice",
+    age: 28,
+    "last name": "Smith"
+}
+
+person.age = 29; // modifying the age property
+console.log(person); // { name: "Alice", age: 29 }
+person.city = "New York"; // adding a new property
+console.log(person); // { name: "Alice", age: 29, city:
+//  "New York" }
+person["last name"] = "Johnson"; // modifying property with space
+console.log(person); // { name: "Alice", age: 29, city: "New York", "last name": "Johnson" }
+
+// some properties of object
+/*
+1. Objects are collections of key-value pairs.
+2. Keys are strings (or Symbols) and values can be of any data type.
+3. Objects are mutable, meaning their properties can be changed.
+4. Properties can be accessed using dot notation or bracket notation.
+5. Objects can contain other objects, arrays, and functions as values.
+*/
+
+console.log(typeof person); // "object"
+console.log(Date()); // current date and time
+
+// 2) Array
+let numbers = [10, 20, 30, 40, 50];
+let heroes = ["Superman", "Batman", "Wonder Woman"];
+numbers[2] = 35; // modifying the third element
+console.log(numbers); // [10, 20, 35, 40, 50]
+heroes.push("Flash"); // adding a new element
+console.log(heroes); // ["Superman", "Batman", "Wonder Woman", "Flash"] 
+heroes.pop(); // removing the last element
+console.log(heroes); // ["Superman", "Batman", "Wonder Woman"]
+console.log(typeof numbers); // "object"
+console.log(typeof heroes); // "object"
+
+// some properties of array
+/*
+1. Arrays are ordered collections of values.
+2. Values can be of any data type, including other arrays and objects.
+3. Arrays are mutable, meaning their elements can be changed.
+4. Elements are accessed using zero-based indexing.
+5. Arrays have built-in methods for common operations like adding, removing, and iterating over elements.
+*/
+
+// type conversion in js
+/*
+1. String to Number: Number("123") or parseInt("123") or parseFloat("123.45")
+2. Number to String: String(123) or (123).toString()
+3. Boolean to Number: Number(true) // 1, Number(false) // 0
+4. Number to Boolean: Boolean(1) // true, Boolean(0) // false
+5. String to Boolean: Boolean("non-empty string") // true, Boolean("") // false
+6. Implicit Conversion: "5" + 10 // "510", "5" - 2 // 3
+*/
+// example of type conversion
+let strNum = "100";
+let convertedNum = Number(strNum); // String to Number
+console.log(convertedNum); // 100
+console.log(typeof convertedNum); // "number"
+let numToStr = 200;
+let convertedStr = String(numToStr); // Number to String
+console.log(convertedStr); // "200"
+console.log(typeof convertedStr); // "string"
+let boolToNum = true;
+let convertedBoolNum = Number(boolToNum); // Boolean to Number
+console.log(convertedBoolNum); // 1
+
+let numToBool = 0;
+let convertedNumBool = Boolean(numToBool); // Number to Boolean
+console.log(convertedNumBool); // false
+console.log(numToBool+1); // 1 wiried js behavior
+
