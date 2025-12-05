@@ -62,6 +62,6 @@ console.log("City copy:",
    // (10) you havae array animal containing lion,tiger,elephant,cheetah replace elephant with giraffe and checkif elephant  is in arry and store result in variable named is_elephant_present
 
    let animal=["lion","tiger","elephant","cheetah"];
-   animal[2]="giraffe";
+   animal[2]="elephant".replace("elephant","giraffe");
    let is_elephant_present=animal.includes("elephant");
    console.log("Is elephant present:", is_elephant_present);
