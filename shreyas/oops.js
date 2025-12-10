@@ -17,3 +17,22 @@ function Car(make, model, year) {
     this.model = model;
     this.year = year;
 }
+
+let myCar = new Car("Toyota", "Camry", 2020);
+console.log(myCar.make); // Output: Toyota
+
+function Tea(type){
+    this.type = type;
+    this.describe = function() {
+        console.log("This is a " + this.type + " tea.");
+    }
+}
+let leamonTea = new Tea("lemon");
+console.log(leamonTea.describe()); // Output: This is a lemon tea.
+
+Animal.prototype.sound = function() {
+    return `${this.species} makes a sound.`;
+};
+
+let dog = new Animal("Dog");
+console.log(dog.sound()); // Output: Dog makes a sound.
